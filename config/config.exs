@@ -51,7 +51,7 @@ config :spark,
 config :ash_events_test,
   ecto_repos: [AshEventsTest.Repo],
   generators: [timestamp_type: :utc_datetime],
-  ash_domains: [AshEventsTest.Accounts]
+  ash_domains: [AshEventsTest.Events, AshEventsTest.Accounts]
 
 # Configures the endpoint
 config :ash_events_test, AshEventsTestWeb.Endpoint,

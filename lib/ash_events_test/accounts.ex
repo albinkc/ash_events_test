@@ -8,5 +8,6 @@ defmodule AshEventsTest.Accounts do
   resources do
     resource AshEventsTest.Accounts.Token
     resource AshEventsTest.Accounts.User
+    resource AshEventsTest.Accounts.SystemActor
   end
 end

@@ -4,7 +4,7 @@ defmodule AshEventsTest.Accounts.User do
     domain: AshEventsTest.Accounts,
     data_layer: AshPostgres.DataLayer,
     authorizers: [Ash.Policy.Authorizer],
-    extensions: [AshAuthentication]
+    extensions: [AshAuthentication, AshEvents.Events]
 
   authentication do
     add_ons do
@@ -56,6 +56,10 @@ defmodule AshEventsTest.Accounts.User do
   postgres do
     table "users"
     repo AshEventsTest.Repo
+  end
+
+  events do
+    event_log AshEventsTest.Events.Event
   end
 
   actions do
