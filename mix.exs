@@ -33,7 +33,7 @@ defmodule AshEventsTest.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:ash_events, [github: "ash-project/ash_events", override: true]},
+      {:ash_events, [github: "albinkc/ash_events", override: true]},
       {:bcrypt_elixir, "~> 3.0"},
       {:picosat_elixir, "~> 0.2"},
       {:sourceror, "~> 1.8", only: [:dev, :test]},
