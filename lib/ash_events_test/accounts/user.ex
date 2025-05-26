@@ -175,6 +175,8 @@ defmodule AshEventsTest.Accounts.User do
       # Generates an authentication token for the user
       change AshAuthentication.GenerateTokenChange
 
+      change set_context(%{strategy_name: :password})
+
       # validates that the password matches the confirmation
       validate AshAuthentication.Strategy.Password.PasswordConfirmationValidation
 
